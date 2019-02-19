@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Capitulo3</string>
+    <string name="title">Noche de lluvia</string>
+    <string name="date">09 FEB 2019</string>
+    <string name="message">Es una noche de lluvia. Es un buen momento para estar en casa. :)</string>
+    <string name="btn1">ME GUSTA</string>
+    <string name="btn2">COMENTAR</string>
+</resources>
