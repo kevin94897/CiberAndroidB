@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tareas</string>
+    <string name="mensaje">Lista de Tareas</string>
+    <string name="ntarea">Tarea</string>
+    <string name="fectarea">12/02/2019</string>
+    <string name="hrtarea">18:26</string>
+</resources>
