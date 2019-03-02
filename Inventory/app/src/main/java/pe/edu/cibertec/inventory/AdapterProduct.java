@@ -2,6 +2,7 @@ package pe.edu.cibertec.inventory;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -20,13 +21,23 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ProductP
     //Crea la vista en base al prototipo (view holder) por cada celda
     @NonNull
     @Override
-    public ProductPrototype onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+    public ProductPrototype onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
+        View view;
+
+        view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.prototype_product, viewGroup, false);
+
+        ProductPrototype p = new ProductPrototype(view);
+
+        return p;
     }
 
     //Carga la informacion por cada celda de acuerdo a la posicion (i)
     @Override
     public void onBindViewHolder(@NonNull ProductPrototype productPrototype, int i) {
+
+        productPrototype.tvName.setText(items.get(i).getName());
+        productPrototype.tvDescription.setText(items.get(i).getDescription());
+        productPrototype.tvQuantity.setText(String.valueOf(items.get(i).getQuantity())); //setText() permite recibir int (id de un string)
 
     }
 
