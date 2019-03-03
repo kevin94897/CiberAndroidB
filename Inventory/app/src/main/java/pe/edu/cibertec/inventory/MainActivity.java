@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -81,13 +83,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         //Valida de donde proviene y el resultado
         if (requestCode == REQUEST_CODE_MAIN && resultCode == RESULT_OK) {
-            String name = data.getStringExtra("product_name");
-            String desc = data.getStringExtra("product_description");
-            int qty = data.getIntExtra("product_quantity", 0);
+            //Cuando ProductActivity pasa el resultado de manera individual cada dato
+            //String name = data.getStringExtra("product_name");
+            //String desc = data.getStringExtra("product_description");
+            //int qty = data.getIntExtra("product_quantity", 0);
 
-            Product p = new Product(name, desc, qty);
+            //Product p = new Product(name, desc, qty);
+            //items.add(p);
 
-            items.add(p);
+            //Ahora ProductActivity pasa el resultado como un JSON del objeto Producto
+            String pJSON = data.getStringExtra("product");
+            if (pJSON != null) {
+                Gson gson = new Gson();
+                Product p = gson.fromJson(pJSON, Product.class);
+                items.add(p);
+            }
+
             //Se le notifica que han habido cambios al adapter
             adapterProduct.notifyDataSetChanged();
         }

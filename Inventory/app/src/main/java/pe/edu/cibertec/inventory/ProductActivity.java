@@ -9,6 +9,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 public class ProductActivity extends AppCompatActivity {
     TextInputEditText etName, etDescription, etQuantity;
 
@@ -45,9 +47,13 @@ public class ProductActivity extends AppCompatActivity {
 
         //TODO: en vez de pasar cada parametro, debera pasar el objeto p (Product)
         //GSON
-        intent.putExtra("product_name", name);
-        intent.putExtra("product_description", desc);
-        intent.putExtra("product_quantity", qty);
+        //intent.putExtra("product_name", name);
+        //intent.putExtra("product_description", desc);
+        //intent.putExtra("product_quantity", qty);
+
+        //Pasando el objeto (previa transformacion con GSon)
+        String pstr = new Gson().toJson(p);
+        intent.putExtra("product", pstr);
 
         //Decirle que la operacion fue exitosa y pasarle el intent (informacion que va a retornar)
         setResult(RESULT_OK, intent);
