@@ -1,5 +1,6 @@
 package pe.edu.cibertec.inventory;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,8 +41,20 @@ public class ProductActivity extends AppCompatActivity {
 
         Product p = new Product(name, desc, qty);
 
+        Intent intent = getIntent(); //Obtenemos el intent
+
+        //TODO: en vez de pasar cada parametro, debera pasar el objeto p (Product)
+        //GSON
+        intent.putExtra("product_name", name);
+        intent.putExtra("product_description", desc);
+        intent.putExtra("product_quantity", qty);
+
+        //Decirle que la operacion fue exitosa y pasarle el intent (informacion que va a retornar)
+        setResult(RESULT_OK, intent);
 
         Toast.makeText(this, "Guardado", Toast.LENGTH_LONG).show();
+
+        finish();
         return true;
     }
 }
