@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="title">AGENDA</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_empresa">Empresa</string>
+    <string name="lbl_telephone">Telefono</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="add_item">Agregar</string>
+    <string name="save">Grabar</string>
+</resources>
