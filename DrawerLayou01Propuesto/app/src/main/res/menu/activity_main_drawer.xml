@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Iconos de Office" />
+        <item
+            android:id="@+id/nav_excel"
+            android:icon="@drawable/excel"
+            android:title="Excel" />
+        <item
+            android:id="@+id/nav_word"
+            android:icon="@drawable/word"
+            android:title="Word" />
+        <item
+            android:id="@+id/nav_ppt"
+            android:icon="@drawable/powerpoint"
+            android:title="Powerpoint" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Figuras de los Simpson" />
+        <item
+            android:id="@+id/nav_bart"
+            android:icon="@drawable/bart"
+            android:title="Bart" />
+        <item
+            android:id="@+id/nav_lisa"
+            android:icon="@drawable/lisa"
+            android:title="Lisa" />
+        <item
+            android:id="@+id/nav_homer"
+            android:icon="@drawable/homer"
+            android:title="Homer" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.actionbar01propuesto.MainActivity">
+    <item
+        android:id="@+id/action_rojo"
+        android:orderInCategory="1"
+        android:title="@string/action_rojo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_verde"
+        android:orderInCategory="2"
+        android:title="@string/action_verde"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_azul"
+        android:orderInCategory="3"
+        android:title="@string/action_azul"
+        app:showAsAction="never" />
+
+</menu>

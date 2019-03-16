@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ActionBar01</string>
+    <string name="action_settings">Settings</string>
+    <string name="mnu_nuevo">Nuevo</string>
+    <string name="mnu_buscar">Buscar</string>
+    <string name="mnu_editar">Editar</string>
+    <string name="mnu_retirar">Retirar</string>
+</resources>
